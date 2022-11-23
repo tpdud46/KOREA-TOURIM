@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #ondd{
+            display: flex;
+            width: 1000px;
+            height: 400px;
+        }
+        .wi{
+            width: 25%;
+            height: 100%;
+            transition: 0.5s;
+        }
+        .wi:first-child{
+            background-color: antiquewhite;
+        }
+        .wi:nth-child(2){
+            background-color: darkcyan;
+        }
+        .wi:nth-child(3){
+            background-color: darkgoldenrod;
+        }
+        .wi:nth-child(4){
+            background-color: darkgreen;
+        }
+        .wi:hover{
+            width: 35%;
+        }
+    </style>
+</head>
+<body>
+    <div id="ondd">
+        <div class="wi"></div>
+        <div class="wi"></div>
+        <div class="wi"></div>
+        <div class="wi"></div>
+    </div>
+</body>
+</html>

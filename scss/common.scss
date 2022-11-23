@@ -1,0 +1,85 @@
+$ipad: 1024px;
+$mobile: 767px;
+
+@mixin respond($media) {
+    @media screen and (max-width:$media) {
+        @content ;
+    }
+}
+* {
+    font-family: "Noto Sans KR", "roboto", sans-serif;
+    margin: 0;
+    padding: 0;
+
+    li {
+        list-style: none;
+    }
+
+    div {
+        box-sizing: border-box;
+    }
+
+    address {
+        font-style: normal;
+        word-break: keep-all;
+    }
+
+    a {
+        box-sizing: border-box;
+        color: #333;
+        text-decoration: none;
+
+        &:hover {
+            color: #333;
+            text-decoration: none;
+        }
+    }
+
+    address {
+        font-style: normal;
+        word-break: keep-all;
+    }
+
+    .clearfix:after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+
+    .blind {
+        display: block;
+        position: absolute;
+        left: 0;
+        top: -9999em;
+    }
+
+    .innerbox {
+        max-width: 1500px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    .more {
+        display: block;
+        max-width: 300px;
+        width: 60%;
+        height: 50px;
+        text-align: center;
+        line-height: 47px;
+        color: white;
+        background-color: #111;
+        border: 1px solid white;
+
+        &:hover {
+            color: white;
+        }
+    }
+
+    @include respond($ipad) {
+        font-size: 14px;
+    }
+
+    @include respond($mobile) {
+        font-size: 12px;
+    }
+}

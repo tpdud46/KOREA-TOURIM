@@ -1,0 +1,424 @@
+* {
+  font-family: "Noto Sans KR", "roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+* li {
+  list-style: none;
+}
+* div {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+* address {
+  font-style: normal;
+  word-break: keep-all;
+}
+* a {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: #333;
+  text-decoration: none;
+}
+* a:hover {
+  color: #333;
+  text-decoration: none;
+}
+* address {
+  font-style: normal;
+  word-break: keep-all;
+}
+* .clearfix:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+* .blind {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: -9999em;
+}
+* .innerbox {
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+* .more {
+  display: block;
+  max-width: 300px;
+  width: 60%;
+  height: 50px;
+  text-align: center;
+  line-height: 47px;
+  color: white;
+  /* background-color: #111; */
+  border: 0.5px solid bisque;
+}
+* .more:hover {
+  color: white;
+}
+@media screen and (max-width: 1024px) {
+  * {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 767px) {
+  * {
+    font-size: 12px;
+  }
+}
+
+
+header {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100px;
+  z-index: 30;
+}
+header .innerbox {
+  max-width: 1800px;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+header .innerbox > a {
+  width: 300px;
+}
+header .innerbox > a img {
+  width: 100%;
+}
+header .innerbox #nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 1.2em;
+  height: 100%;
+  text-align: center;
+}
+header .innerbox #nav > li {
+  margin-right: 20px;
+}
+header .innerbox #nav > li:last-child {
+  margin: 0;
+}
+header .innerbox #nav > li a {
+  position: relative;
+  display: block;
+  color: white;
+}
+header .innerbox #nav > li a::after {
+  content: "";
+  display: block;
+  width: 0%;
+  height: 1px;
+  background: #e7e3e3;
+  position: absolute;
+  bottom: 0;
+  left: -2px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+header .innerbox #nav > li > a {
+  height: 80%;
+  padding-top: 40px;
+}
+header .innerbox #nav > li .sub {
+  height: 0px;
+  overflow: hidden;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+header .innerbox #nav > li .sub li {
+  width: 100%;
+  position: relative;
+}
+header .innerbox #nav > li .sub li a {
+  height: 40px;
+  line-height: 40px;
+  font-size: 0.9em;
+}
+header .innerbox #nav > li .sub li:hover > a::after {
+  width: 100%;
+}
+header .innerbox #nav > li:hover .sub {
+  height: 120px;
+}
+header .innerbox #nav > li:hover > a::after {
+  width: 100%;
+}
+header.on {
+  display: block;
+}
+
+
+html, body {
+  cursor: url("../images/mouse.png"), auto;
+}
+
+#container > section {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+#container > section:first-child > .imgBox {
+  height: 100vh;
+}
+#container > section:first-child > .imgBox > img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#container > section:first-child > .imgBox > img:last-child {
+  height: unset;
+  min-height: 300px;
+  position: absolute;
+  z-index: 10;
+  left: 0;
+  bottom: 0;
+}
+#container > section:first-child .textBox {
+  border: 1px solid white;
+  position: fixed;
+  top: 10%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 500px;
+  height: 500px;
+  color: white;
+  text-align: center;
+}
+#container > section:first-child .textBox p {
+  padding-top: 30%;
+  font-family: "roboto";
+  font-size: 1.7em;
+}
+#container > section:first-child .textBox p span {
+  display: block;
+}
+#container > section:first-child .textBox .btnWrap {
+  padding-top: 20%;
+}
+#container > section:first-child .textBox .btnWrap a {
+  display: block;
+  margin: 0 auto;
+  color: white;
+  font-size: 1.3em;
+  line-height: 2.5em;
+}
+#container > section:first-child .textBox .btnWrap img {
+  display: block;
+  width: 40px;
+  height: 40px;
+  margin: 0 auto;
+  -webkit-animation: mouse 0.4s linear 0s infinite alternate;
+          animation: mouse 0.4s linear 0s infinite alternate;
+}
+@-webkit-keyframes mouse {
+  0% {
+    margin-top: 20px;
+  }
+  100% {
+    margin-top: 30px;
+  }
+}
+@keyframes mouse {
+  0% {
+    margin-top: 20px;
+  }
+  100% {
+    margin-top: 30px;
+  }
+}
+#container > section:last-child {
+  background-color: #333;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100vh;
+}
+#container > section:last-child .infoWrap {
+  position: relative;
+  width: 25%;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  text-align: center;
+  color: white;
+  overflow: hidden;
+}
+#container > section:last-child .infoWrap .arrowWrap {
+  display: none;
+}
+#container > section:last-child .infoWrap:hover {
+  width: 35%;
+}
+#container > section:last-child .infoWrap.on {
+  width: 100%;
+  overflow: unset;
+}
+#container > section:last-child .infoWrap.on .info .textBox {
+  top: 25%;
+  left: 20%;
+}
+#container > section:last-child .infoWrap.on .info .textBox h2 {
+  font-size: 3em;
+}
+#container > section:last-child .infoWrap.on .contentBox {
+  height: 100%;
+}
+#container > section:last-child .infoWrap.on .arrowWrap {
+  display: block;
+  position: absolute;
+  left: 50%;
+  bottom: 5%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 100%;
+  height: 100px;
+}
+
+#container > section:last-child .infoWrap.on .arrowWrap img {
+  -webkit-animation: motion 0.4s linear 0s infinite alternate;
+          animation: motion 0.4s linear 0s infinite alternate;
+}
+@-webkit-keyframes motion {
+  0% {
+    margin-top: 0px;
+  }
+  100% {
+    margin-top: 10px;
+  }
+}
+@keyframes motion {
+  0% {
+    margin-top: 0px;
+  }
+  100% {
+    margin-top: 10px;
+  }
+}
+#container > section:last-child .infoWrap.on .info::before {
+  background: rgba(0, 0, 0, 0.2);
+}
+#container > section:last-child .infoWrap.off {
+  width: 0;
+}
+#container > section:last-child .infoWrap.mouseOn {
+  width: 35%;
+}
+#container > section:last-child .infoWrap.mouseOff {
+  width: 21.6666%;
+}
+#container > section:last-child .infoWrap .info {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+#container > section:last-child .infoWrap .info > .textBox {
+  position: absolute;
+  width: 100%;
+  top: 45%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 50;
+  overflow: hidden;
+}
+#container > section:last-child .infoWrap .info > .textBox h2 {
+  font-size: 2em;
+  margin-bottom: 30px;
+}
+#container > section:last-child .infoWrap .info > .textBox a {
+  font-size: 1.1em;
+  margin: 0 auto;
+}
+#container > section:last-child .infoWrap .info > .textBox img {
+  display: none;
+}
+#container > section:last-child .infoWrap .info > img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+#container > section:last-child .infoWrap .info::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.5);
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+#container > section:last-child .infoWrap .info:hover::before {
+  background: rgba(0, 0, 0, 0.2);
+}
+#container > section:last-child .infoWrap .contentBox {
+  height: 0%;
+  overflow: hidden;
+  background-color: #333;
+  -webkit-transition-delay: 0.5s;
+          transition-delay: 0.5s;
+}
+#container > section:last-child .infoWrap .contentBox section {
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+@media screen and (max-width: 1024px) {
+  #container > section:last-child .infoWrap {
+    width: 50%;
+    height: 50%;
+  }
+  #container > section:last-child .infoWrap:hover {
+    width: 50%;
+  }
+  #container > section:last-child .infoWrap.on {
+    width: 100%;
+    height: 100%;
+  }
+  #container > section:last-child .infoWrap.off {
+    width: 0;
+    height: 0;
+    -webkit-transition: none;
+    transition: none;
+  }
+}
+@media screen and (max-width: 480px) {
+  #container > section:last-child .infoWrap {
+    width: 100%;
+    height: 25%;
+  }
+  #container > section:last-child .infoWrap:hover {
+    width: 100%;
+  }
+  #container > section:last-child .infoWrap.on {
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+  #container > section:last-child .infoWrap.off {
+    -webkit-transition: none;
+    transition: none;
+  }
+}
+@media screen and (max-width: 1024px) {
+  #container > section:last-child {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
